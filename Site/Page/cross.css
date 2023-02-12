@@ -1,0 +1,148 @@
+
+*::-webkit-scrollbar{
+    background-color: var(--dark_back);
+    width: 1vh;
+}
+*::-webkit-scrollbar-track{
+    background-color: rgba(0,0,0,0);
+}
+*::-webkit-scrollbar-thumb{
+    background-color: var(--akcent);
+    border-radius: 100px;
+}
+.InfoPanel{
+    height: 93vh;
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 7vh;
+    z-index: 300;
+    animation: openpan 0.5s forwards;
+    
+}
+@keyframes openpan {
+    0%{
+        backdrop-filter: blur(0px);
+        opacity: 0%;
+    }
+    50%{
+        opacity: 0%;
+    }
+    100%{
+        
+        opacity: 100%;
+        backdrop-filter: blur(15px);
+    }
+}
+.imgInfoBtn{
+    height: 3.5vh;
+    width: 3.5vh;
+    top: 1.75vh;
+    right: 1.75vh;
+    position: fixed;
+    color: white;
+    z-index: 300;
+    background: none;
+    border: 0.1vh solid white;
+    border-radius: 5mm;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+.imgInfoBtn:hover{
+    height: 5vh;
+    width: 5vh;
+    top: 1vh;
+    right: 1vh;
+    color: var(--akcent);
+    border-color: var(--akcent);
+}
+.pannelinf{
+    background-color: var(--dark_back);
+    height: 50vh;
+    width: 50vh;
+    border-radius: 100mm;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.headpan{
+    width: 100%;
+    height: 100%;
+    background: conic-gradient(
+                            hsla(0, 0%, 0%, 0),
+                            hsla(0, 0%, 0%, 0),
+                            hsla(0, 0%, 0%, 0),
+                            hsla(0, 0%, 0%, 0),
+                            hsla(0, 0%, 0%, 0),
+                            hsla(0, 0%, 0%, 0),
+                            hsla(0, 0%, 0%, 0),
+                            var(--akcent)
+                            );
+    transform-origin: 50% 50%;
+    animation: infrot 3s infinite linear;
+    
+}
+@keyframes infrot {
+    0%{
+        transform: rotateZ(0deg);
+    }
+    
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
+.panelMAIN{
+    position: absolute;
+    width:  calc(50vh - 2vh);
+    height: calc(50vh - 2vh);
+    border-radius: 100mm;
+    background-color: var(--dark_back);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+.panelMAIN a{
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 7vh;
+    font-family: 'god';
+    color: var(--light_text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    max-height: 50%;
+    width: 100%;
+    transition: all 0.2s ease;
+}
+.panelMAIN a:hover{
+    background-color: var(--dark_back);
+    color: var(--akcent);
+}
+.panelMAIN label{
+    
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 7vh;
+    font-family: 'god';
+    color: var(--light_text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    max-height: 50%;
+    width: 100%;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+.panelMAIN label:hover{
+    background-color: var(--dark_back);
+    color: var(--akcent);
+}
